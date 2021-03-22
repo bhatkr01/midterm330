@@ -1,0 +1,62 @@
+
+.main {
+    display: flex; /* 2. display flex to the rescue */
+    flex-direction: row;
+    justify-content: space-evenly;
+  }
+  
+label{
+    display: inline-block; 
+    background-color: rgb(152, 205, 226);
+    padding:0.2em;
+    border-radius: 5px;
+    margin-top: 0.5em;
+
+  }
+
+#getInfo{
+
+    display: block;
+    background-color: #4CAF50;
+    padding: 0.2em;
+    font-size: 16px;
+    cursor: pointer;
+    text-align: center;
+    margin-top: 0.5em;
+    border-radius: 5px;
+
+}
+
+label{
+    font-size: 20px;
+}
+#taskList tbody td{
+    padding:20px;
+}
+
+.home_team{
+    flex-basis: 20em;
+}
+#match_info{
+    display:list-item;
+    
+}
+#match_info .main_box{
+    display:flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    
+    
+}
+.time{
+    flex-basis: 20em;
+}
+.score{
+    flex-basis: 20em;
+}
+.versus{
+    flex-basis: 20em;
+}
+.away_team{
+    flex-basis: 20em;
+}
