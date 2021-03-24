@@ -41,6 +41,9 @@ label{
     display:list-item;
     
 }
+#match_details{
+    flex-basis: 20em;
+}
 #match_info .main_box{
     display:flex;
     flex-direction: row;
@@ -52,10 +55,10 @@ label{
     flex-basis: 20em;
 }
 .score{
-    flex-basis: 20em;
+    flex-basis: 10em;
 }
 .versus{
-    flex-basis: 20em;
+    flex-basis: 10em;
 }
 .away_team{
     flex-basis: 20em;
