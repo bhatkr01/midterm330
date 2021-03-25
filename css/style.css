@@ -1,49 +1,50 @@
 
-.main {
-    display: flex; /* 2. display flex to the rescue */
-    flex-direction: row;
-    justify-content: space-evenly;
-  }
+.title_container{
+    text-align: center;
+    color:#3d195b
+}
+
+.image{
+    background-image: url(/images/background3.jpeg);
+      /* Set rules to fill background */
+    min-height: 100%;
+    min-width: 1024px;
+        
+    width: 100%;
+    height: auto;
+
+    position: fixed;
+    top: 0;
+    left: 0;
+    opacity:0.2;
+    z-index: -1;
+}
   
-label{
-    display: inline-block; 
-    background-color: rgb(152, 205, 226);
-    padding:0.2em;
-    border-radius: 5px;
-    margin-top: 0.5em;
-
-  }
-
-#getInfo{
+  #getInfo{
 
     display: block;
-    background-color: #4CAF50;
+    background-color:#3d195b;
     padding: 0.2em;
-    font-size: 16px;
+    font-size: 30px;
+    color:white;
     cursor: pointer;
     text-align: center;
     margin-top: 0.5em;
+    border-radius: 10px;
+
+}
+
+#match_info{
+    margin: 5px;
+    display:list-item;
+    color:#3d195b;
     border-radius: 5px;
-
 }
-
-label{
-    font-size: 20px;
-}
-#taskList tbody td{
-    padding:20px;
-}
-
 .home_team{
     flex-basis: 20em;
 }
-#match_info{
-    display:list-item;
-    
-}
-#match_details{
-    flex-basis: 20em;
-}
+
+
 #match_info .main_box{
     display:flex;
     flex-direction: row;
@@ -52,14 +53,59 @@ label{
     
 }
 .time{
-    flex-basis: 20em;
+    flex-basis: 18em;
+    font-size:1.1em;
 }
+
 .score{
     flex-basis: 10em;
+    text-align: center;
+    font-size:1.2em;
+    color:#1f0435;
 }
-.versus{
+
+.details{
+  white-space: pre-line;  
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  padding:10px;
+  font-weight: bold;
+}
+.details img{
+    width:150px;
+    height:150px;
+    margin: 0 auto;
+}
+
+.hr_line{
+    color:#8a49be;
+    height: 3px !important;
+}
+
+.time, .score{
+    margin-top: 0.5em;
+    font-weight: bold;
+}
+
+.home_team, .away_team, .match_details {
+    display: block;
+    background-color:#3d195b;
+    padding: 0.2em;
+    font-size: 1empx;
+    color:white;
+    cursor: pointer;
+    text-align: center;
+    margin-top: 0.5em;
+    border-radius: 10px;
+}
+.home_team, .away_team{
+    flex-basis: 18em;
+}
+.match_details{
     flex-basis: 10em;
 }
-.away_team{
-    flex-basis: 20em;
+
+.away_stats, .home_stats{
+    flex-basis:10em;
 }
