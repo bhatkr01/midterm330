@@ -9,7 +9,7 @@ async function get_football_data(selected_id) {
         headers : { 'X-Auth-Token': '2e028e92d6ed4a75b8e3ceee3a045715' }
     })
     .then(response => response.json());
-     selected_id.innerHTML="";
+    selected_id.innerHTML="";
     for (let index=0; index<full_data.matches.length;index++){
         localStorage.setItem("local_storage", JSON.stringify(full_data));
         display_matches(full_data.matches[index],selected_id);
@@ -65,8 +65,8 @@ async function display_team_info(team_name){
     var team_id= await fetch("https://elenasport-io1.p.rapidapi.com/v2/seasons/3260/teams?page=1", {
         "method": "GET",
         "headers": {
-            "x-rapidapi-key": "1521a9ed46msh1dbaeb2927d89fap129614jsn4a1066daf85c",
-            "x-rapidapi-host": "elenasport-io1.p.rapidapi.com"
+            "x-rapidapi-key": "2f8207c178msh3715e1040d443d3p194863jsnf8ae466e7fed",
+            "x-rapidapi-host": "elenasport-io1.p.rapidapi.com",
         }
     }).then(response => response.json());
     for (let i=0; i<team_id.data.length;i++){
@@ -74,8 +74,9 @@ async function display_team_info(team_name){
             var team_info= await fetch(`https://elenasport-io1.p.rapidapi.com/v2/teams/${team_id.data[i].id}`, {
             "method": "GET",
             "headers": {
-                "x-rapidapi-key": "1521a9ed46msh1dbaeb2927d89fap129614jsn4a1066daf85c",
-                "x-rapidapi-host": "elenasport-io1.p.rapidapi.com"
+                "x-rapidapi-key": "2f8207c178msh3715e1040d443d3p194863jsnf8ae466e7fed",
+                "x-rapidapi-host": "elenasport-io1.p.rapidapi.com",
+
             }
             }).then(response =>response.json());
             }
@@ -142,6 +143,13 @@ async function clickedon() {
     get_football_data(document.querySelector("#match_info"));
 }
 
+
+async function clear_all(){
+    $("#match_info").empty(); 
+    document.querySelector("#match_info").style.border="none";
+    localStorage.removeItem("local_storage");
+ 
+ }
 window.onload = function() {
     let match_list=localStorage.getItem("local_storage");
     if (match_list){

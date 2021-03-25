@@ -5,7 +5,7 @@
 }
 
 .image{
-    background-image: url(/images/background3.jpeg);
+    background-image: url(../images/background3.jpeg);
       /* Set rules to fill background */
     min-height: 100%;
     min-width: 1024px;
@@ -20,7 +20,7 @@
     z-index: -1;
 }
   
-  #getInfo{
+  #getInfo, .top_button{
 
     display: block;
     background-color:#3d195b;
@@ -29,9 +29,12 @@
     color:white;
     cursor: pointer;
     text-align: center;
-    margin-top: 0.5em;
     border-radius: 10px;
 
+}
+.btn.btn-danger{
+    padding: 0.2em !important;
+    font-size: 30px;
 }
 
 #match_info{
@@ -108,4 +111,8 @@
 
 .away_stats, .home_stats{
     flex-basis:10em;
+}
+.container{
+    display: flex;
+    justify-content: space-between;
 }
