@@ -83,7 +83,7 @@ async function display_team_info(team_name){
     }
     document.querySelector("#match_info").innerHTML="";
     let details_div=document.createElement("div");
-    details_div.innerHTML=`<img src=${team_info.data[0].badgeURL}>`
+    details_div.innerHTML=`<img src=${team_info.data[0].badgeURL}>`;
     for (let info in team_info.data[0]){
         if (info!="badgeURL" && info!="id"){    
            details_div.innerHTML+=info+":"+ " "+ team_info.data[0][info]+ "\n";
